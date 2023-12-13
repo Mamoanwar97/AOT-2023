@@ -1,0 +1,1 @@
+type FindSanta<SantaArray extends Array<any>, ACC extends Array<any> = [] > = SantaArray extends ['🎅🏼', ...any] ? ACC["length"] : SantaArray extends [any, ...infer A] ? FindSanta<A, [...ACC, any]> : never ;
