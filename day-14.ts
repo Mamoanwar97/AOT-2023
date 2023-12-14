@@ -1,0 +1,1 @@
+type DecipherNaughtyList<NamesString extends string, NamesArray extends Array<string> = []> = NamesString extends `${infer Name}/${infer Rest}`? DecipherNaughtyList<Rest, [...NamesArray, Name]> : NamesString extends ""? NamesArray[number] :  NamesArray[number] | NamesString     ;
