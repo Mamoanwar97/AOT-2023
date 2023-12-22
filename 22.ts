@@ -38,7 +38,7 @@ type FlattenArray<Param extends Array<any>, Acc extends Array<any> = []> = Param
 		: FlattenArray<Rest, [...Acc, A]>
 	: Acc;
 
-type Validate<Table extends SudokuTable> = false extends IsGridValid<Table> ? false : true;
+type Validate<Table extends SudokuTable> = IsGridValid<Table>;
 
 type IsGridValid<
 	Table extends SudokuTable,
